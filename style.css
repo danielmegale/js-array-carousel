@@ -1,0 +1,18 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* Generics */
+.container{
+	max-width:1080px;
+	margin:0px auto;
+}
+div{
+    height: 300px;
+    width: 50px;
+}
+img{
+    height: 100%;
+    object-fit: cover;
+}
