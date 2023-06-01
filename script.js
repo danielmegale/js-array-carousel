@@ -32,33 +32,30 @@ images[currentIndex].classList.add('active');
 //Metto in ascolto il next
 nextButton.addEventListener('click',function(){
 
+    //Rimuovo la classe active dall' immagine corrispondente al currentIndex
+    images[currentIndex].classList.remove('active');
+
     //! Controllo
     if(currentIndex === images.length -1){
-        //Rimuovo la classe active dall' immagine corrispondente al currentIndex
-        images[currentIndex].classList.remove('active');
         currentIndex=0
-    };
-        //Rimuovo la classe active dall' immagine corrispondente al currentIndex
-        images[currentIndex].classList.remove('active');
-    
-        //Incremento il current index
-        currentIndex++;
-        
+    }else{
+        currentIndex++
+    }
         //Aggiungo la classe active all'immagine corrispondente al nuovo currentindex
         images[currentIndex].classList.add('active');
 })
 
 //Metto in ascolto il prev
 prevButton.addEventListener('click',function(){
-
-    //!Controllo
-    if(!currentIndex)return;
-
     //Rimuovo la classe active dall'immagine corrispondente al currentIndex
     images[currentIndex].classList.remove('active');
 
-    //Decremento il current index
-    currentIndex--;
+    //!Controllo
+    if(!currentIndex){
+        currentIndex= images.length-1
+    }else{
+        currentIndex--;
+    }
 
     //Aggiungo la classe active all'immagine corrispondete al nuovo currentindex
     images[currentIndex].classList.add('active');
